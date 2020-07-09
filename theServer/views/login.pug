@@ -1,0 +1,103 @@
+extends layout
+
+block metas
+  
+block links
+  link(href='/css/signup.css', rel='stylesheet')
+
+block headScripts
+
+block bodyScripts
+  script(src='/javascripts/loginHelpers.js')
+
+block content
+
+  .modal.fade(id="forgotPasswordFormModal", name="forgotPasswordFormModal", tabindex='-1')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type="button" data-dismiss="modal") &times;
+          h4.modal-title Forgot password?
+        .modal-body
+
+          form(action="", id="forgotPasswordForm", name="forgotPasswordForm", method="POST", enctype="application/x-www-form-urlencoded")
+            
+            .formLead
+              p Forgot your password? Enter your email address below and we'll send instructions on how to reset your password.
+          
+            fieldset
+
+              alert.alert-warning(style="margin-top:10px; display: none; padding-left: 35px;")
+                strong An email containing your password recovery link has been sent. If you do not receive an email within 10 minutes, check your spam folder first, then try again.
+          
+              .form-group
+                input.valid(type="hidden", id="_csrf", name="_csrf", value=`${csrfToken}`)
+          
+                label.control-label(style="margin-top:10px;") Email:
+          
+                input.form-control.input-md(id="forgotEmail", name="forgotEmail", placeholder="Email Address", title="Please enter a valid Email Address", type="email")
+
+                .text-danger.hide.loginerror(style="margin-top:8px;") Email is required
+          
+
+              button(class="btn btn-default btn-md forgotOkBtn" data-dismiss="modal" style="display:none;") OK
+              | 
+              div(class="forgotCSBtns")
+                button(class="btn btn-default btn-md" data-dismiss="modal") Cancel
+                | &nbsp;&nbsp;&nbsp;&nbsp;
+                button(class="btn btn-primary btn-md", id="forgotPasswordSubmitBtn") Submit
+
+
+        .modal-footer
+          .loading(style="display:none;")
+    
+  .main
+    br
+    br
+
+    .container
+
+      .row
+        .col-lg-6.col-md-6.col-sm-8.col-xs-12.col-centered
+          .panel-body
+            h1.form-title= pageHeader.header
+            h3 Please sign in.
+
+            form(action="/login", id="loginForm", name="loginForm", method="POST", enctype="application/x-www-form-urlencoded")
+
+              .row
+                .col-xs-12
+                  .form-group
+                    input.valid(type="hidden", id="_csrf", name="_csrf", value=`${csrfToken}`)
+
+              .row
+                .col-xs-12
+                  .form-group
+                    label.control-label.sr-only(for="email") Email Address
+                    input.form-control(id="email", name="email", placeholder="Email Address", type="text", title="Please enter a valid Email Address", required, autofocus)
+
+              .row
+                .col-xs-12
+                  .form-group
+                    label.control-label.sr-only(for="password") Password
+                    input.form-control(id="password", name="password", placeholder="Password", type="password", value="", autocomplete="off", title="Please enter your Password", required)
+
+
+              .row
+                .col-xs-12
+                  button(class="btn btn-primary btn-md", id="loginSubmitBtn") Submit
+
+
+              .row
+                .col-xs-12(style="margin-top:8px;")
+                  .text-danger.hide.loginerror Email and Password are required. Please try again.
+
+              .row
+                .col-xs-12(style="margin-top:12px;")
+                  i
+                    a(href="#" id="forgotPasswordAnchor", onclick="helper.clearForgotPassword();") Forgot your password?
+
+  .modal-backdrop.fade.in(style="display: none;")
+     img(src="/images/ajax-loader.gif" style="position: fixed; top: 45%; left: 49%;")
+
+

@@ -1,0 +1,31 @@
+extends layout
+
+block headScripts
+
+block bodyScripts
+
+block content
+
+  .main
+    br
+    br
+
+    .container
+      .row
+        .col-lg-8.col-sm-8.col-md-8.col-xs-12.col-centered
+
+          div
+            h1!= pageHeader.header
+
+          br
+
+          div
+            p Please
+              | 
+              a.highlight(href='/login') Log In
+              |&nbsp;or&nbsp;
+              a.highlight(href='/signup') Sign Up
+              |&nbsp;to use Election App 2016.
+
+          br
+          br

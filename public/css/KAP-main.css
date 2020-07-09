@@ -1,0 +1,806 @@
+
+html, body {
+   height: 100%;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul {
+   list-style-type: none;
+}
+
+/*--------------------------------------
+              GENERALS 
+--------------------------------------*/
+
+span.bold {
+   /*font-weight: bold;*/
+       font-family: "FacitWeb-SemiBold", "lucida grande", sans-serif;
+  
+}
+
+.my-account{
+    font-family: "FacitWeb-SemiBold", "lucida grande", sans-serif;
+}
+
+/* Additional style for double menu version */
+
+.enroll-now {
+  background: #e45403;
+   color: #FFF;
+   text-align: center;
+   display: inline-block !important;
+   font-family: "FacitWeb-SemiBold", "lucida grande", sans-serif;
+   /* font-weight: bold; */
+   
+  font-size: .9em;
+   border: solid 2px #f58140;
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   box-shadow: 2px 2px 5px #333;
+   padding: .4em 1.1em;
+   letter-spacing: .1px;
+}
+
+.enroll-now:hover {
+   background: #fd7020 !important;
+   color: #fff !important;
+   border: solid 2px #ff8a49;
+}
+
+
+.icon-group {
+   position: relative;
+}
+
+.icons-group:after {
+   content: '';
+   display: none;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+   clear: both;
+}
+
+.icons-group .icon,
+.icons-group .icon-text,
+.icons-group .icon-wrapper {
+   float: left;
+   margin-right: 1em;
+}
+
+.icons-group.pull-right .icon,
+.icons-group.right .icon,
+.icons-group.pull-right .icon-text,
+.icons-group.right .icon-text,
+.icons-group.pull-right .icon-wrapper,
+.icons-group.right .icon-wrapper {
+   float: right;
+   margin-left: 1em;
+   margin-right: 0;
+}
+
+.icon .icon {
+   float: none !important;
+   display: block;
+   margin: 0 !important;
+}
+
+.icons-group .icon-wrapper {
+   position: relative;
+}
+
+.icon-text {
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: 16px;
+   padding-right: 25px !important;
+   line-height: 20px;
+}
+
+.icon-text.icon-left {
+   padding-left: 25px !important;
+   padding-right: 0 !important;
+   background-position: left;
+}
+
+.icon {
+   width: 16px;
+   height: 16px;
+
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.icon-help {
+   background-image: url(/assets/img/redesign15/help-icon.png);
+   width: 20px;
+   height: 20px;
+}
+
+.icon-help:hover {
+   background-image: url(/assets/img/redesign15/help-icon-hover.png);
+}
+
+.icon-cart {
+   background-image: url(/assets/img/redesign15/cart-icon.png);
+}
+
+.icon-globe {
+   background-image: url(/assets/img/redesign15/globe-icon.png);
+}
+
+.icon-profile {
+   background-image: url(/assets/img/redesign15/profile-icon.png);
+}
+
+.dropdown-menu li a {
+   color: #5e5e5e;
+   padding-right: 0 !important;
+   margin-right: 20px;
+}
+
+.dropdown-menu li a .glyphicon {
+   display: none;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li.current a {
+   color: #2aa4d3;
+   background: transparent url('/assets/img/redesign15/icon-check-mark.png') no-repeat;
+   background-position: right;
+
+}
+
+.dropdown-menu li a:hover .glyphicon,
+.dropdown-menu li.current a .glyphicon {
+   color: #5e5e5e;
+   display: none;
+}
+
+/*--------------------------------------
+              STRUCTURE 
+--------------------------------------*/
+
+.main-page {
+   position: relative;
+   height: 100%;
+   width: 100%;
+}
+
+#header .container {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+}
+
+#header {
+   background: #1d256e;
+   position: relative;
+   z-index: 100;
+}
+
+#header .top-bar {
+   padding: 1.8em 2em 1.3em 2em;
+}
+
+#header .row {
+   margin-left: 0;
+   margin-right: 0;
+}
+
+#header .bottom-bar {
+background-position: center;
+background-size: 100%;
+padding: 0em 2em;
+box-shadow: 0px -11px 10px -12px #191B5A;
+}
+
+#header .bottom-bar .enroll-now {
+   margin-top: .5em;
+}
+
+#header .kaplan-logo {
+   width: 134px;
+   height: 64px;
+}
+
+#header .nav {
+   color: white;
+}
+
+#header .main-menu {
+   padding: 0;
+   margin-top: 3em;
+}
+
+#header .main-menu li a {
+   color: white;
+}
+
+#header .main-menu li .ss-navigatedown {
+   color: #e45403;
+   text-align: right;
+   font-size: 12px;
+   padding-left: 2px;
+}
+
+#header .secondary-menu {
+   margin: 0;
+   font-family: facitweb;
+}
+
+#header .secondary-menu li {
+   float: left;
+   padding: 1.2em 0;
+}
+
+#header .secondary-menu li a {
+   display: block;
+   color: white;
+   padding: 0 1em;
+   border-left: 1px solid #3B64A6;
+   font-size: 17px;
+   font-family: metaweb;
+   line-height: 17px;
+}
+
+#header .secondary-menu li:first-child a {
+   padding-left: 0;
+}
+
+#header .secondary-menu li:last-child a {
+   padding-right: 0;
+}
+
+#header .secondary-menu li a:hover {
+   color: #2BADD9;
+}
+
+#header .secondary-menu li:first-child a {
+   border-left: 0;
+}
+
+.searchbox {
+   background: #fff;
+   color: #222;
+   border: 0px;
+
+   width: 97%;
+   margin-right: -30px;
+   padding: .5em 4px .5em 10px;
+
+   border-radius: 4px 0 0 4px;
+   -moz-border-radius: 4px 0 0 4px;
+   -webkit-border-radius: 4px 0 0 4px;
+
+   font-family: 'FacitWeb', "lucida grande", sans-serif;
+   font-size: 12px;
+   float: left;
+   height: 30px;
+}
+
+#header .searchbox_submit {
+   border: 0px;
+   background-color: #2badd9;
+
+   border-radius: 0 4px 4px 0;
+   -moz-border-radius: 0 4px 4px 0;
+   -webkit-border-radius: 0 4px 4px 0;
+   float: right;
+   font-size: 12px;
+   height: 30px;
+}
+
+#header .top-bar .navbar-nav {
+   padding-bottom: 1em;
+}
+
+#header .top-bar .navbar-nav li {
+   border-left: solid 1px #1C4F92;
+   padding-left: 7px;
+   margin-left: 7px;
+}
+
+#header .top-bar .navbar-nav li a {
+   padding: 0;
+   color: white;
+   line-height: 16px;
+   font-size: 12px;
+}
+
+#header .top-bar .navbar-nav li a:hover {
+   background-color: transparent;
+}
+
+#header .top-bar .navbar-nav li:first-child {
+   border: none;
+   padding-left: 0;
+   margin-left: 0;
+}
+
+#header .top-bar .navbar-nav .dropdown-menu li {
+   border: none;
+   font-size: 12px;
+   margin: .4em 1em;
+   padding: 0;
+}
+
+#header .top-bar .navbar-nav .open > a {
+   background-color: transparent !important;
+}
+
+#header .top-bar .navbar-nav .dropdown-menu li a {
+   display: block;
+   padding: 3px 10px;
+   clear: both;
+   font-weight: normal;
+   line-height: 1.428571429;
+   color: #333;
+   white-space: nowrap;
+}
+
+#header .top-bar .navbar-nav .dropdown-menu li a:hover {
+   background: none;
+   color: #2aa4d3;
+}
+
+.telephone {
+   font-family: 'FacitWeb', "lucida grande", sans-serif;
+   /*font-weight: 600;*/
+   font-size: 13px;
+}
+
+.telephone .bold {
+   font-family: "FacitWeb-semibold", "lucida grande", sans-serif;
+   /*font-weight: bold;*/
+}
+
+.main-menu .row, .secondary-menu .row {
+   background: url('/assets/img/redesign15/dropdown-bottom.png') no-repeat bottom;
+   background-size: 80%;
+   padding-bottom: 25px;
+}
+
+.row.notification-bar {
+   background-image: none !important;
+   padding: 1em 0;
+}
+
+.notification-bar h6 {
+   background: url(/assets/img/redesign15/logo-small.png) no-repeat;
+   padding: 1em 0 1em 50px;
+   margin: 0;
+   color: #fff;
+   font-family: 'FacitWeb';
+   font-weight: normal;
+   font-size: 15px;
+   vertical-align: middle;
+}
+
+.notification-bar h6 span {
+   color: #2AA4D3;
+}
+
+.notification-bar .icons-group {
+   padding: 1em 0;
+   color: white;
+}
+
+.notification-bar .icons-group .icon-text {
+   color: white;
+   text-decoration: none !important;
+}
+
+.notification-bar .icons-group .icon-text:hover {
+   color: white;
+   text-decoration: none !important;
+}
+
+.notification-bar .icons-group .dropdown-menu {
+   width: 100%;
+}
+
+.notification-bar .icons-group .dropdown-menu {
+   /*     margin-left: -1.5em; */
+   margin-bottom: 10px;
+}
+
+.notification-bar .icons-group .icon-wrapper.open {
+   width: 175px;
+   position: absolute;
+   right: 0;
+
+}
+
+.notification-bar .icons-group .open .icon-text {
+   /*     padding: 1em .5em; */
+   /*     margin: -1em -.5em; */
+
+   /*     margin-right: 0; */
+   margin-left: 1.5em;
+   z-index: 10002;
+
+   position: relative;
+   float: left;
+}
+
+.notification-bar .icons-group .bkg {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: black url('/assets/img/redesign15/dropdown-bg.jpg');
+   display: none;
+   z-index: 10001;
+   border-radius: 7px 7px 0 0;
+   box-shadow: 0px 0px 4px #222;
+}
+
+.notification-bar .open .bkg {
+   display: block;
+   padding: 2em 1.5em;
+   margin: -1em 0;
+}
+
+/*--------------------------------------
+        DESKTOP NAVIGATION 
+--------------------------------------*/
+
+/* DROPDOWNS */
+
+.navigation-dropdowns-container {
+   position: relative;
+   z-index: 90;
+   width: 100%;
+}
+
+.navigation-dropdowns-container .dropdown {
+   background: black url('/assets/img/redesign15/dropdown-bg.jpg');
+   padding: 2em 3em 0;
+   position: absolute;
+   z-index: 10000;
+
+   width: 100%;
+
+   border-radius: 0 0 5px 5px;
+   -moz-border-radius: 0 0 5px 5px;
+   -webkit-border-radius: 0 0 5px 5px;
+
+   visibility: hidden;
+
+   -webkit-box-shadow: inset 0px 15px 13px -10px rgba(0,0,0,0.6);
+   -moz-box-shadow: inset 0px 15px 13px -10px rgba(0,0,0,0.6);
+   box-shadow: inset 0px 15px 13px -10px rgba(0,0,0,0.6);
+
+
+}
+
+.navigation-dropdowns-container .dropdown a {
+   font-size: 14px;
+}
+
+.navigation-dropdowns-container .dropdown .sub-menu {
+   padding-left: 0;
+   margin-bottom: 1em;
+}
+
+.navigation-dropdowns-container .dropdown .sub-menu li {
+   padding: .3em 0;
+}
+
+.navigation-dropdowns-container .dropdown .sub-menu li a {
+   color: white;
+   font-weight: normal;
+   font-variant: normal;
+   font-size: 13px;
+}
+
+
+.navigation-dropdowns-container .dropdown a:hover {
+   color: #2badd9;
+   cursor:default;
+}
+
+.navigation-dropdowns-container .dropdown .sub-menu li a:hover {
+   color: #96b711;
+   cursor:pointer;
+}
+
+
+
+/*--------------------------------------
+        MOBILE NAVIGATION 
+--------------------------------------*/
+
+.mobile-navigation-btn {
+   display: block;
+}
+
+.mobile-navigation-btn img {
+   width: 30px;
+}
+
+.mobile-navigation {
+   background: black url('/assets/img/redesign15/dropdown-bg.jpg');
+   width: 280px;
+   min-height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+   z-index: 1000;
+   display: none;
+}
+
+.mobile-navigation .shadow {
+   background: url('/assets/img/redesign15/dropdown-topbg.png') no-repeat top;
+   background-size: 100%;
+   width: 100%;
+   height: 10px;
+}
+
+.mobile-navigation .highlight {
+   color: #00a6dc;
+}
+
+.mobile-navigation .header {
+   background: black url('/assets/img/redesign15/dropdown-bg.jpg');
+
+   position: relative;
+   z-index: 1;
+   padding: 1em 1.5em;
+}
+
+.mobile-navigation .header .top {
+   padding-bottom: 1em;
+   position: relative;
+}
+
+.mobile-navigation .header .icons-group {
+   margin-top: 1em;
+}
+
+.mobile-navigation .header .icons-group li.item {
+   float: right;
+}
+
+.mobile-navigation .header .icons-group .icon {
+   margin-left: 10px;
+   float: none;
+}
+
+.mobile-navigation .header .open .dropdown-toggle {
+   padding: 10px;
+   margin-top: -10px;
+   margin-right: -10px;
+   margin-left: 0;
+   background: transparent url('/assets/img/redesign15/dropdown-bg.jpg');
+   box-shadow: 0px 0px 6px black;
+   border-radius: .5em .5em 0 0;
+   position: relative;
+   width: auto;
+   height: auto;
+}
+
+.mobile-navigation .header .icons-group .dropdown {
+   display: inline;
+}
+
+.mobile-navigation .header .icons-group .dropdown-menu {
+   width: 100%;
+   min-width: 200px;
+   margin-top: -1em;
+   border-radius: 7px;
+   border-top-right-radius: 0;
+   border-top-left-radius: 0;
+}
+
+.mobile-navigation .header .mainMenu-btn {
+   color: white;
+   display: block;
+}
+
+.mobile-navigation .header .ss-navigatedown {
+   color: #e45403;
+}
+
+.mobile-navigation .menus .footer {
+   padding: 1.5em;
+   font-size: 12px;
+   color: white;
+}
+
+.mobile-navigation .menus .footer .enroll-now {
+   width: 100%;
+}
+
+.mobile-navigation .footer .help-wrapper {
+   color: white;
+}
+
+.mobile-navigation .footer .help-wrapper .icon {
+   margin-right: .5em;
+}
+
+.mobile-navigation .menus {
+   position: relative;
+}
+
+.mobile-navigation .menus .menu-wrapper {
+   width: 100%;
+   position: absolute;
+}
+
+.mobile-navigation ul {
+   width: 100%;
+   padding: 0;
+}
+
+.mobile-navigation .menus li {
+   padding: .7em 1.5em;
+   border-bottom: 1px solid #262728;
+   border-top: 1px solid #4b4b4d;
+}
+
+.mobile-navigation .menus li:first-child {
+   border-top: none;
+}
+
+.mobile-navigation .menus li:last-child {
+   border-bottom: none;
+}
+
+.mobile-navigation .menus li .ss-navigateright {
+   color: white;
+}
+
+.mobile-navigation ul li a {
+   color: #2aa4d3;
+   display: block;
+}
+
+/* SUB MENUS */
+
+.mobile-navigation ul li ul {
+   color: white;
+   display: none;
+}
+
+/* ACCORDION SUBMENU */
+
+.mobile-navigation .sub-menu.accordion {
+   padding: 0;
+}
+
+.mobile-navigation .sub-menu.accordion li {
+   border: none;
+   padding: .5em 0;
+}
+
+.mobile-navigation .sub-menu.accordion li a {
+   color: white;
+}
+
+.mobile-navigation .sub-menu.accordion li a:hover {
+   color: #9cb711;
+}
+
+/* PAGES SUBMENU */
+
+.mobile-navigation .menu-page {
+   width: 100%;
+}
+
+.mobile-navigation .menu-page .back-btn {
+   padding: .7em 1.5em;
+   border-bottom: 1px solid #262728;
+   display: block;
+}
+
+.mobile-navigation .sub-menu.page {
+}
+
+.mobile-navigation .sub-menu.page li {
+   padding: .7em 1.5em;
+   background: url('/assets/img/redesign15/dropdown-bg-dark.jpg');
+}
+
+.mobile-navigation .sub-menu.page li:first-child {
+   border: none;
+}
+
+.mobile-navigation .sub-menu.page li li {
+   padding-left: 0;
+   padding-right: 0;
+   background: none;
+}
+
+a.parent-dropdown{
+    font-family: "Facitweb", "lucida grande", sans-serif;
+    font-size: 1.1em;
+    letter-spacing: .1px;
+
+}
+
+@media only screen and (max-width: 992px) {
+   a.parent-dropdown {
+       font-size: 12px;
+   }
+
+   .notification-bar h6 {
+       font-size: 13px;
+   }
+
+   #header .secondary-menu li a {
+      font-size: 15px;
+      padding: 0 .8em;
+   }
+
+}
+
+@media only screen and (max-width: 767px) {
+   html, body {
+       height: auto;
+       /*position: fixed;*/
+   }
+
+   #header .top-bar {
+       padding: 1em 0 0 0;
+   }
+
+   .mobile-nav-bg {
+       background: url('/assets/img/redesign15/double-navbg.png') repeat-y;
+       background-size: 100%;
+       width: 100%;
+       padding: .7em 5px;
+       margin-top: 1em;
+       z-index: 99998;
+   }
+
+   #searchwrapper {
+       width: calc(100% - 36px); /* the size of the mobile-nav-bg + 10px margin */
+       float: right;
+   }
+
+   .navbar-header {
+       text-align: center;
+   }
+
+}
+
+.navigation-dropdowns-container {
+   top: 166px;
+   position: relative;
+   z-index: 90;
+}
+
+
+@media only screen and (max-width: 768px) {
+.navigation-dropdowns-container {
+   top: 152px;
+}
+
+.enroll-now{font-size: 12px;}
+}
+
+#header .bottom-bar .enroll-now {
+margin-top: .6em;
+}
+
+#header ul,
+.mobile-navigation ul,
+.navigation-dropdowns-container ul {
+   list-style: none outside;
+}
+
+#header ul li,
+.mobile-navigation ul li,
+.navigation-dropdowns-container ul li {
+   margin: 0;
+}
+
+.testClassNew {color:#fff;}
+
+.pageSpeedTest {color:#fff;}

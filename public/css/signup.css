@@ -1,0 +1,27 @@
+
+/*
+.error, #error{
+  color: #a94442;
+}
+
+.form-control.error{
+  border: solid 1px red;
+  color: #626262;
+}
+
+select option[value="0"]{
+}
+
+#form-section input:hover {
+  border: 1px solid #666;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  -moz-transition: border-color 0.2s ease-in-out;
+  -o-transition: border-color 0.2s ease-in-out;
+  -ms-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input[type=radio] {
+  cursor: pointer;
+}
+*/
